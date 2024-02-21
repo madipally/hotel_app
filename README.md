@@ -5,6 +5,10 @@
 3. Allow users to modify the booking details (check-in, checkout dates etc.)
 4. Written basic specs.
 
+**#Todo**
+1. Display the booked rooms to the user
+2. Allow user to cancel the booking. 
+
 Screen shot for hotel search
 
 <img width="1424" alt="Screenshot 2024-02-21 at 1 09 24 PM" src="https://github.com/madipally/hotel_room_booking/assets/2417871/eeae5fdd-539b-4f5e-ae18-69e909c288df">
