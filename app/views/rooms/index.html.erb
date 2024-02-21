@@ -1,0 +1,20 @@
+<!-- app/views/rooms/index.html.erb -->
+<div class="container">
+  <h1 class="mt-5">Rooms</h1>
+  
+  <div class="row mt-4">
+    <% @rooms.each do |room| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Room Number: <%= room.number %></h5>
+            <p class="card-text">Hotel: <%= room.hotel.name %></p>
+            <%= link_to 'Reserve a Room', new_reservation_path(room), class: 'btn btn-primary' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
+  <%= link_to 'New Room', new_room_path, class: 'btn btn-success' %>
+</div>

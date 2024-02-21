@@ -1,0 +1,18 @@
+<!-- app/views/hotels/index.html.erb -->
+<h1>Hotels</h1>
+
+<%= form_tag hotels_path, method: :get, class: "hotel-search-form" do %>
+  <%= text_field_tag :location, params[:location], placeholder: "Enter location" %>
+  <%= submit_tag "Search" %>
+<% end %>
+<% unless @hotels.nil? %>
+    <div class="hotel-list">
+        <% @hotels.each do |hotel| %>
+            <div class="hotel">
+                <h2><%= hotel.name %></h2>
+                <p>Location: <%= hotel.location %></p>
+                <%= link_to "View Details", hotel_path(hotel), class: "btn btn-primary" %>
+            </div>
+        <% end %>
+    </div>
+<% end %>

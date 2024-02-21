@@ -1,0 +1,22 @@
+<!-- app/views/reservations/index.html.erb -->
+<div class="container">
+  <h1 class="mt-5">Reservations</h1>
+  <% unless @reservations.nil? %>
+  <div class="row mt-4">
+      <% @reservations.each do |reservation| %>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">Check-in Date: <%= reservation.check_in_date %></p>
+              <p class="card-text">Check-out Date: <%= reservation.check_out_date %></p>
+              <p class="card-text">Room: <%= reservation.room.number %></p>
+              <p class="card-text">User: <%= reservation.user.email %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  
+  <%= link_to 'New Reservation', new_reservation_path, class: 'btn btn-success' %>
+</div>

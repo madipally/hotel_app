@@ -1,0 +1,23 @@
+
+<h1>Search Hotels</h1>
+
+<%= form_tag search_hotels_path, method: :get, class: "form-inline mb-3" do %>
+  <div class="form-group mr-2">
+    <%= label_tag :location, 'Location:', class: "sr-only" %>
+    <%= text_field_tag :location, params[:location], placeholder: 'Enter location', class: 'form-control' %>
+  </div>
+  <%= submit_tag 'Search', class: 'btn btn-primary' %>
+<% end %>
+
+<% if @hotels.any? %>
+  <% @hotels.each do |hotel| %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title"><%= hotel.name %></h5>
+        <p class="card-text">Location: <%= hotel.location %></p>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <p>No hotels found.</p>
+<% end %>
