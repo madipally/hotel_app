@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. List all hotels with feature to filter by location.
+2. Allow users to book a room in a hotel by choosing check-in date, check-out date etc.
+4. Allow users to modify the booking details (check-in, checkout dates etc.)
